@@ -1,34 +1,40 @@
 * {
-    border: 1px red solid;
-    box-sizing: border-box;
-    background-color: rgb(189, 189, 189);
-    
+    box-sizing: border-box; 
 }
 
-html, body {
+body {
+    background-color: rgb(228, 227, 227);
     display: flex;
     flex-direction: row;
     justify-content: center;
     min-height:100vh;
     margin:0;
+    gap: 5rem;
+    
 }
 
+/* Main text on the page */
 .mainText {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 2.5rem;
+    font-family:'Courier New', Courier, monospace;
     width: 70rem;
 }
 
 .mainText>p {
-    padding: 3em;
+    padding: 2em;
 }
 
+
+/* left side photo */
 .leftSidePhotoContainer>img {
     width: 40rem;
     height: 100vh;
     object-fit: cover;
+    vertical-align: middle;
     
 }
 
@@ -36,37 +42,103 @@ html, body {
     width: 40rem;
     height: 100vh;
 }
+
+/* signup container */
 .formContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 1em;
+    border: none;
     align-items: center;
-    width: 70rem;
-    height: 10rem;
+    width: 67rem;
+    height: 18rem;
     background-color: rgb(255, 255, 255);
     gap: 4em;
+    
+ 
 }
 
-.firstColumn {
+.firstColumn{
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);      
+    row-gap: 1.3em;
+}
+
+.firstColumn>span {
+    font-size: 1.5rem;
+    
+    
 }
 
 .secondColumn {
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
+    row-gap: 1.3em;
 }
 
-.formInput {
+.secondColumn>span {
+    font-size: 1.5rem;
+    color:  rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    user-select: none;
+    
+}
+
+.formInput, .labelForm {
     background-color: rgb(255, 255, 255);
     width: 13rem;
     height: 1.5rem;
+    box-sizing:content-box;
+   
+}
+
+.formInput {
+    border: 1px solid rgb(170, 170, 170);
+    
 }
 
 .labelForm {
-    background-color: rgb(255, 255, 255);
-    width: 13rem;
-    height: 1.5rem; 
+    font-size: 0.9rem;
+    height: 1.2rem;
+    text-transform: uppercase;
+    font-family:'Courier New', Courier, monospace;
+    
+    
+  
+}
+
+
+    
+
+
+
+.firstNameCont, .emailCont, .passwordCont, .LastNameCont, .phoneNumberCont, .passwordConfirmCont {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.submitButton {
+    background-color: rgb(27, 27, 27);
+    color: white;
+    border: none;
+    height: 4rem;
+    width: 9rem;
+    text-transform: uppercase;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.submitButton:hover {
+    background-color: rgb(97, 97, 97);
+    transition: 0.2s;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-right: 2.5em;
+    margin-top: 2em;
 }

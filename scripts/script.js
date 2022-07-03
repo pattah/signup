@@ -1,23 +1,23 @@
 
-const dupa = document.querySelector('.formInput');
-const wrongDisplay = document.querySelector('.wrongInfo');
+const wrongDisplay = document.querySelectorAll('.wrongInfo');
 const formData = document.querySelector('.formData');
-const formInput = document.querySelector('.formInput')
-
+const formInput = document.querySelectorAll('.formInput')
+const firstPassword = document.querySelector('#firstPassword')
+  const passwordConfirm = document.querySelector('#passwordConfirm')
 const submitButton = document.querySelector('.submitButton')
+const dupa = document.querySelector('.firstNameCont')
 
-function check() {
-const firstPassword = document.querySelector('#firstPassword');
-const passwordConfirm = document.querySelector('#passwordConfirm');
-    if (firstPassword.value === passwordConfirm.value) {
-         passwordConfirm.setCustomValidity('');
-        
-    } else {
-         passwordConfirm.setCustomValidity('Passwords do not match');
-        
-    }
-}
-check()
+submitButton.addEventListener('click', () => {
+  formInput.forEach(el => {
+       if(el.value === '') {
+            wrongDisplay.textContent = 'required field'
+       }
+  });
+});
+
+
+
+
 
 
 

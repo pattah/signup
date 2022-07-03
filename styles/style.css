@@ -113,7 +113,9 @@ body {
 
     
 
-
+.wrongInfo {
+    color: aqua;
+}
 
 .firstNameCont, .emailCont, .passwordCont, .LastNameCont, .phoneNumberCont, .passwordConfirmCont {
     display: flex;

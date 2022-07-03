@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
 <meta charset="UTF-8">
 <title> ol jeaa</title>
 <link rel="stylesheet" href="./styles/style.css">
+</head>
 <body>
 
 <!--Image on the left side of the page-->
 <div class="leftSidePhotoContainer">
-    <img src="./images/pexels-marvin-machler-11127092.jpg">
+    <img src="./images/pexels-marvin-machler-11127092.jpg" alt="nike shoes">
 </div>
 
 <!--Main text on the page-->
 <div class="rightSide">
     <main class="mainText">
-     
         <p>
           Start your online business journey today!
           All you have to do is sign up and post offers of items you want to sell!
     </main>
+    
 
 
     <!-- Signup container -->
-    <form action="#" method="get" class="formData">
+    <form action="#" method="post" class="formData"  >
     <fieldset class="formContainer">
       <div class="firstColumn">
         <span>Let's do this!</span>
 
       <div class="firstNameCont">
         <label for="FirstName" class="labelForm" >First Name</label>
-        <input type="text" id="FirstName" name="FirstName" class="formInput" required>
-        <span class="wrongInfo">iiii</span>
+        <input type="text" id="FirstName" name="FirstName" class="formInput" required >
+        <span class="wrongInfo"></span>
       </div>
 
       <div class="emailCont">
         <label for="email" class="labelForm" >Email</label>
-        <input type="email" id="email" name="email" class="formInput" id="emailInvalid" required>
-        <span class="wrongInfo">iiii</span>
+        <input type="email" id="email" name="email" class="formInput" required>
+        <span class="wrongInfo"></span>
       </div>
 
       <div class="passwordCont">
-        <label for="password" class="labelForm">Password</label>
-        <input type="password" id="firstPassword" name="password" class="formInput" required >
-        <span class="wrongInfo">iiii</span>
+        <label for="firstPassword" class="labelForm">Password</label>
+        <input type="password" id="firstPassword" name="password" class="formInput" minlength="8" required onchange="check()"   >
+        <span class="wrongInfo"></span>
       </div>
     </div>
 
@@ -53,27 +54,29 @@
       <div class="LastNameCont">
         <label for="LastName" class="labelForm">Last Name</label>
         <input type="text" id="LastName" name="LastName" class="formInput" required>
-        <span class="wrongInfo">iiii</span>
+        <span class="wrongInfo"></span>
       </div>
 
       <div class="phoneNumberCont">
         <label for="phoneNumber" class="labelForm">Phone Number</label>
-        <input type="tel" id="phoneNumber" name="phoneNumber" class="formInput" required>
-        <span class="wrongInfo">iiii</span>
+        <input type="number" id="phoneNumber" name="phoneNumber" class="formInput" required max="15" length="15">
+        <span class="wrongInfo"></span>
       </div>
       
       <div class="passwordConfirmCont">
         <label for="passwordConfirm" class="labelForm">Confirm Password</label>
-        <input type="password" id="passwordConfirm" name="passwordConfirm" class="formInput" required >
-        <span class="wrongInfo">iiii</span>
+        <input type="password" id="passwordConfirm" name="passwordConfirm" class="formInput" required onchange="check()" >
+        <span class="wrongInfo"></span>
       </div>
     </div>
     </fieldset>
     <div class="buttonContainer">
 <button type="submit" class="submitButton">Create account</button>
+<span>Already have an account? <a href="file:///home/bartek/repos/signup/index.html" class="logIn">Log in</a></span>
 </div>
 </form>
+
+</div>
   <script src="./scripts/script.js"></script>
 </body>
-    </head>
 </html>
